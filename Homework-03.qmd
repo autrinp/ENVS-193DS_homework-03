@@ -1,0 +1,21 @@
+---
+title: "Homework 3"
+author: "Autrin Peralta"
+date: 03/08/2026
+format: html
+editor: visual
+---
+
+# Set Up
+
+```{r}
+#| label: reading iun packages
+#| message: false
+library(tidyverse)#general use for data wrangling, cleaning, etc.
+library(janitor)
+
+library(readr)
+salinity <- read_csv("~/ENVS-193DS/HW3/data/salinity-pickleweed (1).csv")
+
+
+```
