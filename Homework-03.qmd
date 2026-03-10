@@ -118,6 +118,8 @@ ggplot(data = Flipflop_data, #pulling from this data set
   theme(legend.position = "none") #remove legend
 ```
 
+Biking time(in mins.) calculated based on individual instances of wearing flip flops(n=30). Green points indicate non wearing flip flop times and red points indicate wearing flip flop times. The most recent calculated time was on 03/05/2026
+
 ```{r}
 Sleep_data <- my_data_2_autrin #Changing data set name
 Sleep_data <- Sleep_data[-1,] |> #removing N/A column from data set
@@ -137,8 +139,10 @@ ggplot(data = Sleep_data, #pulling from this data set
   labs(
     x = "Jumped in Ocean(yes/no)", #name x-axis
     y = "Sleeping Time(Hrs.)", #name y-axis
-    title = "Ocean dipping Affecting Sleep?", #add title
+    title = "Ocean Dipping Affecting Sleep?", #add title
     subtitle = "03/02/2026") + #add subtitle
   theme_classic() + #background to white
   theme(legend.position = "none") #remove legend
 ```
+
+Sleeping time related to jumping in the ocean. Red points show days not jumped in the ocean and blue points show days jumped in the ocean(n=30).
