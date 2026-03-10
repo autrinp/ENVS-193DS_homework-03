@@ -71,3 +71,7 @@ I checked fro normality and homoscedasticity in the qq plot and residual vs fitt
 d\.
 
 For these variables we used the Pearson's coorelation test because both variables were continious and showed normal distirbution. We found a moderate relationship between soil salinity(mS/cm) and pickleweed biomass(g)(Pearson's r = 0.53, t(21) = 2.9, p = 0.01, ⍺ = 0.5). This shows that the correlation between salinity and biomass is significant which indicated that higher salinity soils relate to pickleweeds with larger biomass.
+
+e\.
+
+Larger, heavier pickleweeds have a clear positive relationship with soil salinity. This means to have the greatest success in repopulating the pickleweeds we should plant them in places with higher salinity.
