@@ -44,23 +44,26 @@ ggplot(data = salinity, #data set to plot
 c\.
 
 ```{r}
-par(mfrow = c(1, 2))
-qqnorm(salinity$salinity_mS_cm, main = "Salinity")
-
-qqline(salinity$salinity_mS_cm, col = "red")
-
-qqnorm(salinity$pickleweed, main = " Pickleweed Biomass")
-
-qqline(salinity$pickleweed, col = "red")
+#| label: Linear model function
+#| message: false
+pickleweed_model <- lm( #creating model object and creating linear model function
+  pickleweed ~ salinity_mS_cm, #formula
+  data = salinity #pulling data from "salinity"
+)
 ```
-
-Both QQ plots show a normal minimal skew from the line and only a few outliers showing that both variables are normally distributed. This means the Pearson test will be the most effective
-
-d\.
 
 ```{r}
-cor.test(salinity$salinity_mS_cm,salinity$pickleweed,
-         method = "pearson")
+#| label: base R residuals
+#| message: false
+par(mfrow = c(1,2)) #display plots ina a 1x2 grid
+plot(pickleweed_model) #plotting model data
 ```
 
-We found a moderate relationship between soil salinity(mS/cm) and pickleweed biomass(g)(Pearson's r = 0.53, t(21) = 2.9, p = 0.01, ⍺ = 0.5). This shows that the coorelation between salinity and biomass is significant wihich indicated that higher salinity soils relate to pickleweeds with larger biomasses.
+The residual graphs show that the data has homoscedasicity and a clear normal distribution between the two variables . This means the Pearson's correlation test will be the most effective.
+
+```{r}
+cor.test(salinity$salinity_mS_cm,salinity$pickleweed, # doing a coorelation test pulling from salinity data set
+         method = "pearson") # using Pearson's coorelation test
+```
+
+We found a moderate relationship between soil salinity(mS/cm) and pickleweed biomass(g)(Pearson's r = 0.53, t(21) = 2.9, p = 0.01, ⍺ = 0.5). This shows that the correlation between salinity and biomass is significant which indicated that higher salinity soils relate to pickleweeds with larger biomass.
