@@ -62,6 +62,8 @@ plot(pickleweed_model) #plotting model data
 The residual graphs show that the data has homoscedasicity and a clear normal distribution between the two variables . This means the Pearson's correlation test will be the most effective.
 
 ```{r}
+#| label: Running a Pearson's correlation test
+#| message: false
 cor.test(salinity$salinity_mS_cm,salinity$pickleweed, # doing a coorelation test pulling from salinity data set
          method = "pearson") # using Pearson's coorelation test
 ```
@@ -75,3 +77,14 @@ For these variables we used the Pearson's coorelation test because both variable
 e\.
 
 Larger, heavier pickleweeds have a clear positive relationship with soil salinity. This means to have the greatest success in repopulating the pickleweeds we should plant them in places with higher salinity.
+
+f\.
+
+```{r}
+#| label: Running a Spearman rank correlation test
+#| message: false
+cor.test(salinity$salinity_mS_cm,salinity$pickleweed, # doing a coorelation test pulling from salinity data set
+         method = "spearman") #using the spearman rank coorelation
+```
+
+By doing the alternative test( The Spearman rank coorelation) the results would be very similar and would both reject the null hypothesis that the two variables have no relation to each other. We found a moderate relationship between soil salinty(mS/cm) and pickleweed biomass(g)(Spearman's r = 0.59, t = 824, p = 0.003, ⍺ = 0.5).
