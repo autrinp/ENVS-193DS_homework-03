@@ -28,6 +28,7 @@ b\.
 
 ```{r}
 #| label: Salinity vs biomass visualization
+#| message: false
 ggplot(data = salinity,
        aes(x = salinity_mS_cm,
            y = pickleweed,
