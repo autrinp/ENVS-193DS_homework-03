@@ -146,3 +146,11 @@ ggplot(data = Sleep_data, #pulling from this data set
 ```
 
 Sleeping time related to jumping in the ocean. Red points show days not jumped in the ocean and blue points show days jumped in the ocean(n=30).
+
+# Problem 3
+
+a\.
+
+For my biking data, I could make each point on the jitter plot bike wheels. whiltst showing each biker with either flip flops or not. For the sleeping data I could make the points into ocean waves with beds inside the waves instead of fish. The idea would be to include my main variables with the points on the graph.
+
+b\.
