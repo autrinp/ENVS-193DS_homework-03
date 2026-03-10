@@ -94,6 +94,8 @@ By doing the alternative test( The Spearman rank correlation) the results would 
 a\.
 
 ```{r}
+#| label: Visualization for data set 1
+#| message: false
 Flipflop_data <- my_data_autrin_2 #Changing data set name
 Flipflop_data <- Flipflop_data[-1,] |> #removing N/A column from data set
 clean_names() |> #cleaning names to all lowercase _
@@ -121,6 +123,8 @@ ggplot(data = Flipflop_data, #pulling from this data set
 Biking time(in mins.) calculated based on individual instances of wearing flip flops(n=30). Green points indicate non wearing flip flop times and red points indicate wearing flip flop times. The most recent calculated time was on 03/05/2026
 
 ```{r}
+#| label: Visualization for data set 2
+#| message: false
 Sleep_data <- my_data_2_autrin #Changing data set name
 Sleep_data <- Sleep_data[-1,] |> #removing N/A column from data set
 clean_names() |> #cleaning names to all lowercase _
@@ -176,3 +180,15 @@ a\.
 The article is focusing on the relationship between vitality and spending time outdoors and around natural environments. The question in a bundle is: does being outdoors increase vitality? A t-test wqas used for study 1. The response variable was: vitality level (on a scale from 1-7). The predictor vairiable was: vignettes(imaginary setting). The t-test was used to compare three different aspects of the vignette scenarios: vitality of outdoors vs indoors, vitality of being alone or with people, and vitality of of being active or not active. The t-test, for example for outdoors vs indoors, would show a p-value of (p\<0.0001) which demonstrates that it is not by chance that being outdoors increases vitality.
 
 ![](images/clipboard-3494321364.png)
+
+b\.
+
+For this paper the authors showed all the important data points(SD, t Value, Estimates) very clearly and it made sense. The data shows the test results clearly and the corresponding variables
+
+c\.
+
+The authors here did a good job with visual clutter. They separated the main ideas from the variables and made everything very readable.
+
+d\.
+
+To make the table better they could have put the values in order based on values to make it easier to read. They also could have put each variables in its own box to make it more visually appealing.
