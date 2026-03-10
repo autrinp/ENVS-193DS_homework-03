@@ -9,11 +9,11 @@ editor: visual
 # Set Up
 
 ```{r}
-#| label: reading iun packages
+#| label: reading in packages
 #| message: false
 library(tidyverse)#general use for data wrangling, cleaning, etc.
 library(janitor)
-
+library(calecopal)
 library(readr)
 salinity <- read_csv("~/ENVS-193DS/HW3/data/salinity-pickleweed (1).csv")
 
@@ -29,14 +29,14 @@ b\.
 ```{r}
 #| label: Salinity vs biomass visualization
 #| message: false
-ggplot(data = salinity,
-       aes(x = salinity_mS_cm,
-           y = pickleweed,
-           color = pickleweed)) + 
-  geom_point(color = "forestgreen") + 
-  theme_minimal() +
-  labs(x = "Soil Salinity(mS/cm)",
-       y = "Pickleweed Biomass(g)",
-       title = "As Salinity Increases Biomass Increases") +
-  theme(legend.position = "none")
+ggplot(data = salinity, #data set to plot
+       aes(x = salinity_mS_cm, #set x-axis
+           y = pickleweed, #set y-axis
+           color = salinity_mS_cm)) +
+  geom_point(color = "tan3") + #create scatterplot and channeg color of points
+  theme_minimal() + #Put background as white
+  labs(x = "Soil Salinity(mS/cm)", #name x-axis
+       y = "Pickleweed Biomass(g)", #name y-axis
+       title = "As Salinity Increases Biomass Increases") + #Make title
+  theme(legend.position = "none") #remove legend
 ```
