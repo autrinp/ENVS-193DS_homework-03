@@ -154,3 +154,13 @@ a\.
 For my biking data, I am thinking of connecting my scatter plot to make a bath and have my no side be flip-flops riding bikes and my yes side be shoes riding bikes . For the sleeping data, I'm thinking of connecting the points to make waves and change all the points inside into z's. The idea would be to include my main variables with the points on the graph.
 
 b\.
+
+![](images/IMG_2201.jpeg){width="330"}
+
+c\.
+
+![](images/IMG_2202.jpeg){width="340"}
+
+d\.
+
+For my final ideas I changed my two graphs. For the biking one, I made each point a bike wheel and made it so the wheels got bigger the higher they went(indicating more time), I still had flip flops riding the "yes" bikes and shoes riding the "no" bikes. For the sleeping one, I put a bed under the points and made all the points into Z's, and on the yes side i drew the bed and z's inside a wave. This was a sketch that was sparked by my original idea. I wanted a cartoon sort of idea that involved both variables.
