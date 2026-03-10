@@ -23,3 +23,19 @@ salinity <- read_csv("~/ENVS-193DS/HW3/data/salinity-pickleweed (1).csv")
 # Problem 1
 
 a\. The two appropriate tests are the Pearson's correlation and the Spearman rank correlation. Pearson's is a parametric test that would assume that the salinity and California pickleweed biomass are both continuous variables with a normally distributed relationship measuring the strength of linearity. The Spearman is a non-parametric test that would measure the monotonic relationship between these two variables using ranks.
+
+b\.
+
+```{r}
+#| label: Salinity vs biomass visualization
+ggplot(data = salinity,
+       aes(x = salinity_mS_cm,
+           y = pickleweed,
+           color = pickleweed)) + 
+  geom_point(color = "forestgreen") + 
+  theme_minimal() +
+  labs(x = "Soil Salinity(mS/cm)",
+       y = "Pickleweed Biomass(g)",
+       title = "As Salinity Increases Biomass Increases") +
+  theme(legend.position = "none")
+```
