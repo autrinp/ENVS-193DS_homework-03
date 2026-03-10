@@ -168,3 +168,11 @@ For my final ideas I changed my two graphs. For the biking one, I made each poin
 e\.
 
 Click "[view](Presentation3.pptx)" to see slides
+
+# Problem 4
+
+a\.
+
+The article is focusing on the relationship between vitality and spending time outdoors and around natural environments. The question in a bundle is: does being outdoors increase vitality? A t-test wqas used for study 1. The response variable was: vitality level (on a scale from 1-7). The predictor vairiable was: vignettes(imaginary setting). The t-test was used to compare three different aspects of the vignette scenarios: vitality of outdoors vs indoors, vitality of being alone or with people, and vitality of of being active or not active. The t-test, for example for outdoors vs indoors, would show a p-value of (p\<0.0001) which demonstrates that it is not by chance that being outdoors increases vitality.
+
+![](images/clipboard-3494321364.png)
