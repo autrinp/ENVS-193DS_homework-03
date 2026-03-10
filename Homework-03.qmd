@@ -151,6 +151,6 @@ Sleeping time related to jumping in the ocean. Red points show days not jumped i
 
 a\.
 
-For my biking data, I could make each point on the jitter plot bike wheels. whiltst showing each biker with either flip flops or not. For the sleeping data I could make the points into ocean waves with beds inside the waves instead of fish. The idea would be to include my main variables with the points on the graph.
+For my biking data, I am thinking of connecting my scatter plot to make a bath and have my no side be flip-flops riding bikes and my yes side be shoes riding bikes . For the sleeping data, I'm thinking of connecting the points to make waves and change all the points inside into z's. The idea would be to include my main variables with the points on the graph.
 
 b\.
