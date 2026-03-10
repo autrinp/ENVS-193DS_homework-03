@@ -15,9 +15,9 @@ library(tidyverse)#general use for data wrangling, cleaning, etc.
 library(janitor)
 library(calecopal)
 library(readr)
-salinity <- read_csv("~/ENVS-193DS/HW3/data/salinity-pickleweed (1).csv")
-
-
+salinity<- read_csv("data/salinity-pickleweed (1).csv")
+my_data_autrin_2 <- read_csv("data/my_data - autrin 2.csv")
+my_data_2_autrin <- read_csv("data/my data 2 - autrin.csv")
 ```
 
 # Problem 1
@@ -87,4 +87,58 @@ cor.test(salinity$salinity_mS_cm,salinity$pickleweed, # doing a coorelation test
          method = "spearman") #using the spearman rank coorelation
 ```
 
-By doing the alternative test( The Spearman rank coorelation) the results would be very similar and would both reject the null hypothesis that the two variables have no relation to each other. We found a moderate relationship between soil salinty(mS/cm) and pickleweed biomass(g)(Spearman's r = 0.59, t = 824, p = 0.003, ⍺ = 0.5).
+By doing the alternative test( The Spearman rank correlation) the results would be very similar and would both reject the null hypothesis that the two variables have no relation to each other. We found a moderate relationship between soil salinity(mS/cm) and pickleweed biomass(g)(Spearman's r = 0.59, t = 824, p = 0.003, ⍺ = 0.5).
+
+# Problem 2
+
+a\.
+
+```{r}
+Flipflop_data <- my_data_autrin_2 #Changing data set name
+Flipflop_data <- Flipflop_data[-1,] |> #removing N/A column from data set
+clean_names() |> #cleaning names to all lowercase _
+select(wearing_flips,biking_time_mins) #selecting response/predictor variables
+
+ggplot(data = Flipflop_data, #pulling from this data set
+       aes(x = wearing_flips, #x-axis
+           y = biking_time_mins, #y-axis
+           color = wearing_flips)) + #colored points
+  geom_jitter( #plot jittered points
+    width = 0.10,
+    size = 0.9,
+    alpha = 0.8) +
+  scale_color_manual(values = c("No" = "darkgreen", #changing point fill colors from default
+                                "Yes" = "brown")) +
+  labs(
+    x = "Wearing Flip Flops(yes/no)", #name x-axis
+    y = "Biking Time(mins.)", #name y-axis
+    title = "Flip Flops Affect on Biking", #set title
+    subtitle = "03/05/2026") + #add subtitle
+  theme_classic() + #change background to white
+  theme(legend.position = "none") #remove legend
+```
+
+```{r}
+Sleep_data <- my_data_2_autrin #Changing data set name
+Sleep_data <- Sleep_data[-1,] |> #removing N/A column from data set
+clean_names() |> #cleaning names to all lowercase _
+select(jumped_in_ocean_yes_no, hours_of_sleep_hrs) #selecting response/predictor variables
+
+ggplot(data = Sleep_data, #pulling from this data set
+       aes(x = jumped_in_ocean_yes_no, #x-axis
+           y = hours_of_sleep_hrs, #y-axis
+           color = jumped_in_ocean_yes_no)) + #colored points
+  geom_jitter( #plotting jittered points
+    width = 0.10,
+    size = 0.9,
+    alpha = 0.8) +
+  scale_color_manual(values = c("No" = "red", #changing point fill colors from default
+                                "Yes" = "blue")) +
+  labs(
+    x = "Jumped in Ocean(yes/no)", #name x-axis
+    y = "Sleeping Time(Hrs.)", #name y-axis
+    title = "Ocean dipping Affecting Sleep?", #add title
+    subtitle = "03/02/2026") + #add subtitle
+  theme_classic() + #background to white
+  theme(legend.position = "none") #remove legend
+```

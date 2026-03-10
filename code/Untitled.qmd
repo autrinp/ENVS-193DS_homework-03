@@ -1,0 +1,9 @@
+---
+title: "Homework 3"
+author: "Autrin Peralta"
+date: 03/08/2026
+format: html
+editor: visual
+---
+
+## 
